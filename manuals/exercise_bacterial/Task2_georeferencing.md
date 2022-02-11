@@ -29,7 +29,7 @@ For this task, you will be split into teams. Using the skills you learned in the
 To learn about phylogenetic reconstruction and geo-referencing for epidemiological inference, we will work with some software that has already been introduced as well as some new software introduced in this module. We will work with real data from _Salmonella enetrica_ serovar Typhimurium sampled from regional labs in England and Wales, United Kingdom in 2015. 
 
 ### _Salmonella enetrica_ serovar Typhimurium
-_Salmonella enterica_ is a diverse bacterial species that can cause disease in both human and animals. Human infections caused by _Salmonella_ can be divided into two, typhoidal _Salmonella_ or non-typhoidal _Salmonella_ (NTS). The former include Typhi and Paratyphi serovars that cause typhoid. NTS comprises of multiple serov   ars that cause self-limiting gastroenteritis in humans and is normally associated with zoonotic _Salmonella_ reservoirs, typically domesticated animals, with little or no sustained human-to-human transmission. 
+_Salmonella enterica_ is a diverse bacterial species that can cause disease in both human and animals. Human infections caused by _Salmonella_ can be divided into two, typhoidal _Salmonella_ or non-typhoidal _Salmonella_ (NTS). The former include Typhi and Paratyphi serovars that cause typhoid. NTS comprises of multiple serovars that cause self-limiting gastroenteritis in humans and is normally associated with zoonotic _Salmonella_ reservoirs, typically domesticated animals, with little or no sustained human-to-human transmission. 
 
 _Salmonella enterica_ serovar Typhimurium (_S._ Typhimurium), unlike the classical views of NTS, can cause an invasive form of NTS (iNTS), with distinct clinical representations to typhoid and gastroenteritis and normally characterized by a nonspecific fever that can be indistinguishable from malaria and in rare cases is accompanied by diarrhoea ([Okoro et al. Nature Genetics, 2012](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3491877/)).
 
@@ -38,7 +38,7 @@ Whole genome sequence analysis of this organism of provides some insight into th
 ## Your task
 The Global Health Authority (GHA) has asked you to provide an overview of Salmonella enterica serovar Typhimurium in England and Wales, using retrospective samples. You will need to generate a whole-genome sequencing based tree from all 24 sequences and correlate this to the geography of the city. You will also look into the distribution of antimicrobial resistance and investigate the genetic basis for the resistance phenotype you identified in the laboratory. At the end of the task we will split into groups to discuss your findings. Each group will be provided a question to present to the other learners regarding what you can conclude from the data. 
 
-The teams are the will be assigned on the day. Each team will have an instructor working with them to answer any questions.
+The teams will be assigned on the day. Each team will have an instructor working with them to answer any questions.
 
 * You will need to compete the following steps to answer the research questions posed to you.  
 * Phylogenetic analysis– SNP-calling and phylogenetic inference (1hr)
@@ -54,27 +54,27 @@ You will create a phylogenetic tree of the _S._ Typhimurium isolates from Englan
 To achieve this, you will be provided with the following files in the Task folder: 
 * A metadata table (metadata.xls) which contains information on the isolates including the date and address of collection.
 * Sequence data. You will only have fastq files for 3 isolates so you can practice mapping to a reference to extract SNP data. These are in the ‘sequence data’ folder. 
-* An ariba_reports folder that contains a summary the resistance reports from ARIBA to save time. You are encouraged to run the ARIBA analysis on the samples allocated to your group.
-* _S._ Typhimurium fasta and embl files, which you will use as a reverence.
+* An ariba_reports folder that contains a summary of the resistance reports from ARIBA to save time. You are encouraged to run the ARIBA analysis on the samples allocated to your group.
+* _S._ Typhimurium fasta and embl files, which you will use as a reference.
 
 * A pseudogenomes folder that contains an .fa file. 
 
 * And a PDF of the literature reference cited on page 2.
 
 ----
-## Other infromation
+## Other information
 
 ### Your isolate names
 
 The isolate names you can see in the subfolders of your group folder. There are two files for every isolate  `_1.fastq.gz` and `_2.fastq.gz.` These represent the forward and reverse reads of paired end sequencing for that isolate.   
 
 
-When you work with your own sequencing data after the course, other naming conventions will be used. As in the example above, it is likely this formats will include helpful pieces of information, so find out what your own sequencing data names mean when the time comes!  
+When you work with your own sequencing data after the course, other naming conventions will be used. As in the example above, it is likely these formats will include helpful pieces of information, so find out what your own sequencing data names mean when the time comes!  
 
 ### How to use this module 
 As in some previous modules, you will be provided with many of the commands you will need to perform the analysis. 
 
-We have provided you with a guide time for each task so that you will have plenty of time to ds your findings with the group. We strongly suggest you keep to these times.
+We have provided you with a guide time for each task so that you will have plenty of time to discuss your findings with the group. We strongly suggest you keep to these times.
 
 ### Mini group discussion
 Once you have completed all the tasks you will need to compile your findings. We suggest you make summarise these in PowerPoint or Word with one slide per task. You can then reflect on your findings and draw conclusions about the data using all that you have learnt during the week. Examples of some of the exciting key images you might produce are below, but don’t be limited by these ideas - please be as creative as you like!
@@ -91,7 +91,7 @@ Once you have completed all the tasks you will need to compile your findings. We
 
 ### General Information 
 
-In this task you will construction of a tree from WGS data. You will map the sequence data to the _Salmonella enterica_ Typhimurium reference genome SL1344. To save on time, you will only be mapping the fastq files to 2.5 million base pairs of the genome. Although this will take a long time, keep in mind that this step would ordinarily take many more hours of computation time. 
+In this task you will construct a tree from WGS data. You will map the sequence data to the _Salmonella enterica_ Typhimurium reference genome SL1344. To save on time, you will only be mapping the fastq files to 2.5 million base pairs of the genome. Although this will take a long time, keep in mind that this step would ordinarily take many more hours of computation time. 
 
 Bioinformatic processing of data into biologically-meaningful outputs involves the conversion of data into many different forms. Just like working in the laboratory, it’s  useful to to break this process down into individual steps and have a plan. 
 
@@ -104,7 +104,7 @@ A rough guide of the steps for this task is below and in the following schematic
 
 ### Step 1: Map and call SNPs for each isolate
 
-Your reference sequence for this is Salmonella enterica serovar Typhimurium strain SL1344, called `Salmonella_enterica_serovar_Typhimurium_SL1344_2.5MB.fasta` in the task folder. You may want to create a local copy in the directory you are working in by using the cp command. 
+Your reference sequence for this is _Salmonella enterica_ serovar Typhimurium strain SL1344, called `Salmonella_enterica_serovar_Typhimurium_SL1344_2.5MB.fasta` in the task folder. You may want to create a local copy in the directory you are working in by using the cp command. 
 
 Map the sequencing data for each isolate to the reference genome and obtain a pseudogenome (incorporating the isolate SNPs into the reference sequence). The required commands were covered in the mapping and phylogeny modules. If you struggle with the commands, ask the instructors for help. 
 
@@ -172,7 +172,7 @@ Additionaly, running your RAxML with a bootstrap value denoted bythe '-b' option
 
 
 ### Step 4: Interpret your phylogenetic tree
-Open you final tree file (`RAxML_result.STm`) in FigTree and midpoint root it by selecting _Tree > Midpoint Root_. 
+Open your final tree file (`RAxML_result.STm`) in FigTree and midpoint root it by selecting _Tree > Midpoint Root_. 
 
 You will need to this file that you have saved in FigTree in the subsequent georeferencing task, but you will need to save it in a specific format to be compatible with [Microreact](https://microreact.org/showcase). Go to _File > Export trees > select Newick file format_. Remember to save your file with a _.nwk_ suffix so that you know what type of file it is.
 
